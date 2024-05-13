@@ -414,7 +414,7 @@
     var btn=document.getElementById('registerBtn');
    function red () {
            btn.style.opacity="1"
-           btn.innerHTML="Register"
+           btn.innerHTML="register.html"
    
                           }
                           function topFunction() {
@@ -432,7 +432,7 @@ document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
            async function registerUser(values) {
                await $.ajax({
                    type: "POST",
-                   url: "https://chemringoptions-render-server.onrender.com/auth/register",
+                   url: "https://chemringoptions-render-server.onrender.com/auth/register.html",
                    dataType: "json",
                    data: { ...values },
                    timeout: 30000,
