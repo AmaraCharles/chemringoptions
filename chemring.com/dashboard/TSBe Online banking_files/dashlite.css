@@ -2412,7 +2412,7 @@ a.bg-lighter:hover, .dual-listbox a.dual-listbox__item:hover, a.bg-lighter:focus
   .d-sm-flex { display: flex !important; }
   .d-sm-inline-flex { display: inline-flex !important; } }
 
-@media (min-width: 768px) { .d-md-none { display: none !important; }
+@media (min-width: 768px) { . { display: none !important; }
   .d-md-inline { display: inline !important; }
   .d-md-inline-block { display: inline-block !important; }
   .d-md-block { display: block !important; }

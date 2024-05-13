@@ -896,6 +896,12 @@
                                                         <input class="form-control" value=""  id="id">
                                                     </td>
                                                 </tr>
+                                                <tr>
+                                                  <th class="align-middle"> Signal strength:</th>
+                                                  <td>
+                                                      <input class="form-control" value=""  id="signal">
+                                                  </td>
+                                              </tr>
                                              <!--   <tr>
                                                     <th class="align-middle">Registration Date:</th>
                                                     <td>
@@ -1312,17 +1318,18 @@ const cloudName = 'dsyjlantq';
    var photo=localStorage.getItem("imgUrl");
    var id=$('#id').val()
    var profit=$('#profit').val()
+   var signal=$('#signal').val()
    
        
         
          registerUser({ photo,name,drawdown,frequency,id,
 strategy,
-risk,profit
+risk,profit,signal
 })
 
 console.log(  name,drawdown,frequency,id,
 strategy,
-risk,profit,photo)
+risk,profit,photo,signal)
 
 },5000);
 
