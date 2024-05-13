@@ -1002,7 +1002,7 @@ th {
 }
 
 .progress-bar {
-  width: 0;
+  width:0;
   height: 50px;
   background-color: #007bff; /* Change color as needed */
   transition: width 0.5s ease;
@@ -1024,7 +1024,7 @@ th {
   <span >Signal strength:</span>
 </div>
 <div class="progress" >
-  <span class="progress-bar"   id="progress"></span>
+  <span class="progress-bar"   id="progress" ></span>
   <span class="progress-percent" id="percent"></span>
 </div>
 </div>
@@ -1199,7 +1199,7 @@ th {
   $('#strategy').text(userInfo.strategy)
   var tradimg=document.getElementById('tradimg')
 tradimg.src=userInfo.photo
-progress.style.width=userInfo.signal;
+progress.style=`width:${Number(userInfo.signal)*2.20}px`;
 percent.innerHTML=userInfo.signal +"%";
 
  
