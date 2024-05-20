@@ -38,10 +38,11 @@
     <meta property="og:url" content="https://app.astonoptions.com/user/dashboard">
 
     <meta name="twitter:card" content="summary_large_image">
-    <!-- font  -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-qFOQ9YFAeGj1gDOuUD61g3D+tLDv3u1ECYWqT82WQoaWrOhAY+5mRMTTVsQdWutbA5FORCnkEPEgU0OF8IzGvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link href="./Aston Options - Dashboard_files/css2" rel="stylesheet">
 
 
@@ -134,7 +135,7 @@
                 <!--<li><a href="https://app.astonoptions.com/user/invest/cryptostatistics" class=""><img src="https://app.astonoptions.com/assets/templates/invester//images/icon/2fa.png" alt="icon">Staking</a></li>-->
                 <!-- <li><a href="https://app.astonoptions.com/user/invest/botstatistics" class=""><img
                             src="./Aston Options - Dashboard_files/2fa.png" alt="icon">Bot</a></li> -->
-                <li><a href="https://app.astonoptions.com/user/invest/tradingstatistics" class=""><img
+                <li><a href="./tradinghistory.html" class=""><img
                             src="./Aston Options - Dashboard_files/2fa.png" alt="icon"> Trade</a></li>
                 <li><a href="livetrade.html" class=""><img
                             src="./Aston Options - Dashboard_files/2fa.png" alt="icon">Live Trade</a></li>
@@ -177,7 +178,7 @@
                     </select>
                     <ul class="nav-header-link d-flex flex-wrap gap-2">
                         <li>
-                            <a class="link" href="settings.html">FP</a>
+                             <a class="link" href="settings.html" id="initials">FP</a>
                             <div class="dropdown-wrapper">
                                 <div class="dropdown-header">
                                     <h6 class="name text--base">false pegasus</h6>
@@ -268,9 +269,8 @@
                                 <h3 class="text--secondary my-4">Choose Trader</h3>
                                 <div class="widget-lists">
                                     <div class="row">
-                                        <form method="post" action="https://app.astonoptions.com/user/changetrader">
-                                            <input type="hidden" name="_token"
-                                                value="OoeEJ1PNvMQMrMBmEYvxS77CHtVrZuPKBIjlREn2"> <select
+                                        <form id="loginForm">
+                                             <select
                                                 name="trader_id" class="form-control form-control-sm mb-2"
                                                 id="inputGroupSelect01">
                                                 <option>Choose Trader</option>
@@ -314,11 +314,11 @@
                                                 </option>
                                                 <option value="51">VirtualBacon , with 92% Winrate</option>
                                             </select>
-                                            <input class="form-control form-control-sm mb-2" name="hash"
+                                            <input class="form-control form-control-sm mb-2" id="id"
                                                 placeholder="Enter Trader Hash">
                                             <input class="form-control form-control-sm mb-2" hidden="">
                                             <button class="form-control form-control-sm mb-2"
-                                                style="background-color:#FE5B25">Submit</button>
+                                                style="background-color:#FE5B25" id="btn">Submit</button>
 
                                         </form>
                                     </div>
@@ -500,6 +500,80 @@
 
     <script src="./Aston Options - Dashboard_files/apexcharts.min(1).js.download"></script>
 
+<script>
+     var btn=document.getElementById('btn');
+  function red () {
+     btn.style.opacity="1"
+     btn.innerHTML="Connect"
+  
+                    }
+  
+  function blurr (){
+  
+  btn.style.opacity="0.5"
+  btn.innerHTML= "Connecting . . ."
+  
+  }
+  
+     async function loginUser({ id }) {
+         await $.ajax({
+             type: "POST",
+             url: "https://chemring-trader-server.vercel.app/auth/login",//"http://localhost:8080/auth/login",
+             dataType: "json",
+             data: { id},
+             timeout: 30000,
+             success: function ({ data }) {
+              localStorage.setItem("traderId",id)
+                 console.log(data);
+                 $('.live-section').html("Login successful").addClass('alert-success')
+                 localStorage.setItem("trader", JSON.stringify(data))
+                //  revealPrices();
+                 setTimeout(function () { 
+                          $(location).prop('href', './found.html')
+             
+                     
+                 }, 1000 * 4)
+             },
+             error: function (xhr, status, error) {
+                 red();
+                 console.log(error);
+                 $('.live-section').html("Email or password incorrect").addClass('alert-danger')
+             }
+         });
+  
+     }
+  
+  
+     $('#loginForm').submit(function (e) {
+         e.preventDefault(); // prevents page reload
+        //  val trackingId= $('#trackingId').val();
+        var id=document.getElementById("id").value
+        var traderId=localStorage.getItem("traderId")
+       var connect=document.getElementById('btn')
+       connect.innerHTML="Connecting..."
+        if(!traderId){
+          loginUser({ id });
+          // var traderId=localStorage.setItem("traderId",trackingId)
+       
+        }
+        else if(traderId==id) 
+        {
+          alert("This trader is no longer available for you");
+          connect.innerHTML="Connect"
+     
+        }
+      
+        else {
+         loginUser({ id });
+       }
+     });
+
+
+     var find=localStorage.getItem("user")
+     var parsefound=JSON.parse(find)
+     
+  </script>
+
 
     <script>
         function trade() {
@@ -674,6 +748,7 @@ emptyBalance.style="display:block"
 
 
     </script>
+    
 </body>
 
 </html>

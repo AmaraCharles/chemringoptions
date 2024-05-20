@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0058)https://app.astonoptions.com/user/invest/tradingstatistics -->
+<!-- saved from url=(0058)./tradinghistory.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,10 +27,13 @@
     <meta property="og:image:type" content="png">
     <meta property="og:image:width" content="1180">
     <meta property="og:image:height" content="600">
-    <meta property="og:url" content="https://app.astonoptions.com/user/invest/tradingstatistics">
+    <meta property="og:url" content="./tradinghistory.html">
     
     <meta name="twitter:card" content="summary_large_image">
     <!-- font  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="./tradinghistory_files/css2" rel="stylesheet">
 
 
@@ -213,70 +216,97 @@ window.smartsupp||(function(d) {
 
 <div class="d-flex flex-wrap">
 
-    <div class="dashboard-sidebar" id="dashboard-sidebar">
-    <button class="btn-close dash-sidebar-close d-xl-none"></button>
-    <a href="https://app.astonoptions.com/" class="logo"><img src="./tradinghistory_files/logo_2.png" alt="images"></a>
-    <div class="bg--lights">
-        <div class="profile-info">
-            <p class="fs--13px mb-3 fw-bold">ACCOUNT BALANCE</p>
-            <h4 class="usd-balance text--base mb-2 fs--30">0.00 <sub class="top-0 fs--13px">USD </sub></h4>
-            <p class="btc-balance fw-medium fs--18px">0.00 <sub class="top-0 fs--13px">USD <small>(Profit Wallet)</small></sub></p>
-            <!--<p class="btc-balance fw-medium fs--18px">0.00 <sub class="top-0 fs--13px">USD <small>(Staking Wallet)</small></sub></p>-->
-            <div class="mt-4 d-flex flex-wrap gap-2">
-                <a href="https://app.astonoptions.com/user/deposit" class="btn btn--base btn--smd">Deposit</a>
-                <a href="https://app.astonoptions.com/user/withdraw" class="btn btn--secondary btn--smd">Withdraw</a>
-            </div>
-        </div>
-    </div>
-    <ul class="sidebar-menu">
-        <li><a href="https://app.astonoptions.com/user/dashboard" class=""><img src="./tradinghistory_files/dashboard.png" alt="icon"> Dashboard</a></li>
-        <!--<li><a href="https://app.astonoptions.com/user/invest/statistics" class=""><img src="https://app.astonoptions.com/assets/templates/invester//images/icon/investment.png" alt="icon"> Investments</a></li>-->
-        <!--<li><a href="https://app.astonoptions.com/user/invest/cryptostatistics" class=""><img src="https://app.astonoptions.com/assets/templates/invester//images/icon/2fa.png" alt="icon">Staking</a></li>-->
-        <li><a href="https://app.astonoptions.com/user/invest/botstatistics" class=""><img src="./tradinghistory_files/2fa.png" alt="icon">Bot</a></li>
-        <li><a href="https://app.astonoptions.com/user/invest/tradingstatistics" class=""><img src="./tradinghistory_files/2fa.png" alt="icon"> Trade</a></li>
-        <li><a href="https://app.astonoptions.com/user/invest/tradinglive" class=""><img src="./tradinghistory_files/2fa.png" alt="icon">Live Trade</a></li>
-        <li><a href="https://app.astonoptions.com/user/deposit" class=""><img src="./tradinghistory_files/wallet.png" alt="icon"> Deposit</a></li>
-        <li><a href="https://app.astonoptions.com/user/withdraw" class=""><img src="./tradinghistory_files/withdraw.png" alt="icon"> Withdraw</a></li>
-                <!--<li><a href="https://app.astonoptions.com/user/transfer-balance" class=""><img src="https://app.astonoptions.com/assets/templates/invester//images/icon/balance-transfer.png" alt="icon"> Transfer Balance</a></li>-->
-                <li><a href="https://app.astonoptions.com/user/transactions" class=""><img src="./tradinghistory_files/transaction.png" alt="icon"> Transactions</a></li>
-        <li><a href="https://app.astonoptions.com/user/referrals" class=""><img src="./tradinghistory_files/referral.png" alt="icon"> Referrals</a></li>
-        
-        <li><a href="https://app.astonoptions.com/ticket" class=""><img src="./tradinghistory_files/ticket.png" alt="icon"> Support Ticket</a></li>
-        <li><a href="https://app.astonoptions.com/user/logout" class=""><img src="./tradinghistory_files/2fa.png" alt="icon">Logout</a></li>
-    </ul>
-</div>
-
-    <div class="dashboard-wrapper">
-
-        <div class="dashboard-nav d-flex flex-wrap align-items-center justify-content-between">
-    <div class="nav-left d-flex gap-4 align-items-center">
-        <div class="dash-sidebar-toggler d-xl-none" id="dash-sidebar-toggler">
-            <i class="fas fa-bars"></i>
-        </div>
-    </div>
-    <div class="nav-right d-flex flex-wrap align-items-center gap-3">
-                    <select name="langSel" class="langSel form--control h-auto px-2 py-1 border-0" id="langSel">
-                                    <option value="en" selected="">English</option>
-                            </select>
-                <ul class="nav-header-link d-flex flex-wrap gap-2">
-            <li>
-                <a class="link" href="https://app.astonoptions.com/user/profile-setting">FP</a>
-                <div class="dropdown-wrapper">
-                    <div class="dropdown-header">
-                        <h6 class="name text--base">false pegasus</h6>
-                        <p class="fs--14px">falsepegasus</p>
+        <div class="dashboard-sidebar" id="dashboard-sidebar">
+            <button class="btn-close dash-sidebar-close d-xl-none"></button>
+            <a href="https://chemringoptions.com" class="logo"><img src="./Aston Options - Dashboard_files/logo_2.png"
+                    alt="images"></a>
+            <div class="bg--lights">
+                <div class="profile-info">
+                    <p class="fs--13px mb-3 fw-bold">ACCOUNT BALANCE</p>
+                    <h4 class="usd-balance text--base mb-2 fs--30"><span id="accountBalance"></span> <sub
+                            class="top-0 fs--13px">USD </sub></h4>
+                    <p class="btc-balance fw-medium fs--18px"><span id="profit">0.00</span> <sub
+                            class="top-0 fs--13px">USD <small>(Profit Wallet)</small></sub></p>
+                    <!--<p class="btc-balance fw-medium fs--18px">0.00 <sub class="top-0 fs--13px">USD <small>(Staking Wallet)</small></sub></p>-->
+                    <div class="mt-4 d-flex flex-wrap gap-2">
+                        <a href="deposit.html" class="btn btn--base btn--smd">Deposit</a>
+                        <a href="withcheckout.html"
+                            class="btn btn--secondary btn--smd">Withdraw</a>
                     </div>
-                    <ul class="links">
-                        <li><a href="https://app.astonoptions.com/user/profile-setting"><i class="las la-user"></i> Profile</a></li>
-                        <li><a href="https://app.astonoptions.com/user/change-password"><i class="las la-key"></i> Change Password</a></li>
-                        <li><a href="https://app.astonoptions.com/user/twofactor"><i class="las la-key"></i> 2fa</a></li>
-                        <li><a href="https://app.astonoptions.com/user/logout"><i class="las la-sign-out-alt"></i> Logout</a></li>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html" class="active"><img
+                            src="./Aston Options - Dashboard_files/dashboard.png" alt="icon"> Dashboard</a></li>
+                <!--<li><a href="https://app.astonoptions.com/user/invest/statistics" class=""><img src="https://app.astonoptions.com/assets/templates/invester//images/icon/investment.png" alt="icon"> Investments</a></li>-->
+                <!--<li><a href="https://app.astonoptions.com/user/invest/cryptostatistics" class=""><img src="https://app.astonoptions.com/assets/templates/invester//images/icon/2fa.png" alt="icon">Staking</a></li>-->
+                <!-- <li><a href="https://app.astonoptions.com/user/invest/botstatistics" class=""><img
+                            src="./Aston Options - Dashboard_files/2fa.png" alt="icon">Bot</a></li> -->
+                <li><a href="./tradinghistory.html" class=""><img
+                            src="./Aston Options - Dashboard_files/2fa.png" alt="icon"> Trade</a></li>
+                <li><a href="livetrade.html" class=""><img
+                            src="./Aston Options - Dashboard_files/2fa.png" alt="icon">Live Trade</a></li>
+                <li><a href="deposit.html" class=""><img
+                            src="./Aston Options - Dashboard_files/wallet.png" alt="icon"> Deposit</a></li>
+                <li><a href="withcheckout.html" class=""><img
+                            src="./Aston Options - Dashboard_files/withdraw.png" alt="icon"> Withdraw</a></li>
+                <!--<li><a href="https://app.astonoptions.com/user/transfer-balance" class=""><img src="https://app.astonoptions.com/assets/templates/invester//images/icon/balance-transfer.png" alt="icon"> Transfer Balance</a></li>-->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active" id="transactionsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="./transactions_files/transaction.png" alt="icon"> Transactions
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="transactionsDropdown">
+                      <a class="dropdown-item" href="depositshistory.html">Deposits</a>
+                      <a class="dropdown-item" href="withdrawalhistory.html">Withdrawals</a>
+                      <a class="dropdown-item" href="tradinghistory.html">Copy trades</a>
+                    </div>
+                  </li>
+                <li><a href="referrals.html" class=""><img
+                            src="./Aston Options - Dashboard_files/referral.png" alt="icon"> Referrals</a></li>
+
+                <!-- <li><a href="https://app.astonoptions.com/ticket" class=""><img
+                            src="./Aston Options - Dashboard_files/ticket.png" alt="icon"> Support Ticket</a></li> -->
+                <li><a href="./login.html" class=""><img
+                            src="./Aston Options - Dashboard_files/2fa.png" alt="icon">Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="dashboard-wrapper">
+
+            <div class="dashboard-nav d-flex flex-wrap align-items-center justify-content-between">
+                <div class="nav-left d-flex gap-4 align-items-center">
+                    <div class="dash-sidebar-toggler d-xl-none" id="dash-sidebar-toggler">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+                <div class="nav-right d-flex flex-wrap align-items-center gap-3">
+                    <select name="langSel" class="langSel form--control h-auto px-2 py-1 border-0">
+                        <option value="en" selected="">English</option>
+                    </select>
+                    <ul class="nav-header-link d-flex flex-wrap gap-2">
+                        <li>
+                             <a class="link" href="settings.html" id="initials">FP</a>
+                            <div class="dropdown-wrapper">
+                                <div class="dropdown-header">
+                                    <h6 class="name text--base">false pegasus</h6>
+                                    <p class="fs--14px">falsepegasus</p>
+                                </div>
+                                <ul class="links">
+                                    <li><a href="settings.html"><i
+                                                class="las la-user"></i> Profile</a></li>
+                                    <li><a href="changepassword.html"><i
+                                                class="las la-key"></i> Change Password</a></li>
+                                    <!-- <li><a href="https://app.astonoptions.com/user/twofactor"><i class="las la-key"></i>
+                                            2fa</a></li> -->
+                                    <li><a href="../login.html"><i
+                                                class="las la-sign-out-alt"></i> Logout</a></li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-            </li>
-        </ul>
-    </div>
-</div>
+            </div>
+
 
         <div class="dashboard-container">
 
@@ -544,10 +574,8 @@ window.smartsupp||(function(d) {
                                 <th>Status</th>
                             </tr>
                             </thead>
-                            <tbody>
-                                                            <tr>
-                                    <td class="text-muted text-center" colspan="100%" data-label="Coin Pair">Data not found</td>
-                                </tr>
+                            <tbody class="table-body">
+                                                            
                             
                             </tbody>
                         </table><!-- table end -->
@@ -611,7 +639,98 @@ window.smartsupp||(function(d) {
     })(jQuery)
   </script>
   
-  
+  <script>
+
+    var currentUser = {};
+    
+    
+    $(document).ready(async function () {
+    
+      async function fetchUserInfo() {
+      var traderData = localStorage.getItem('trader')
+      var parsedData =JSON.parse(traderData)
+      var traderIdent=parsedData._id;
+    //   var traderData = localStorage.getItem('user')
+    //   var parsedData =JSON.parse(traderData)
+    //   var traderIdent=parsedData.trader;
+    
+    
+      const response = await $.ajax({
+        type: "GET",
+        url: `https://trader-server-sigma.vercel.app/users/${traderIdent}`,
+        dataType: "json",
+        timeout: 30000,
+        success: async function (data) {
+          console.log("data", data);
+          Object.assign(currentUser, data.data)
+        },
+        error: function () {
+          alert(error)
+        }
+       
+      });
+    
+      return response.data;
+    }
+
+    $('.btn').click(function(){
+      var btn=$('.btn')
+      btn.text('...')
+    })
+
+    
+    
+      const userInfo = await fetchUserInfo();
+      const userInfoString=JSON.stringify(userInfo)
+    const user=localStorage.setItem("user",userInfoString)
+
+    
+    $('#id').text(userInfo._id)
+    $('#drawdown').text(userInfo.drawdown)
+    $('#profit').text(userInfo.profit)
+    $('#frequency').text(userInfo.frequency)
+    $('#risk').text(userInfo.risk)
+    $('#name').text(userInfo.name)
+    $('#strategy').text(userInfo.strategy)
+   
+   
+   
+   
+    
+    var tbl = $('.table-body');
+    var td=$('<td>');
+         userInfo.history.forEach(function (user) {
+         
+
+       
+
+            var row = $('<tr>').appendTo(tbl);
+            $('<td>').text(`${user.amount}`).appendTo(row);
+                $('<td>').text(`${user.type}`).appendTo(row);
+                  
+                  $('<td>').text(`${user.profit}`).appendTo(row);
+                    $('<td>').text(`${user.name}`).appendTo(row);
+                        $('<td>').text(`${user.status}`).appendTo(row);
+                  
+           
+            tbl.appendTo($(".table"));
+    
+           
+          
+    
+          })
+    
+
+    
+     });
+    
+    
+    
+    
+      </script>
+
+    
+
    <script>
         const countrySelect = document.getElementById('countrySelect');
         const stateSelect = document.getElementById('stateSelect');
