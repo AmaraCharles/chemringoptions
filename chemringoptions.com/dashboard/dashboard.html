@@ -229,7 +229,33 @@
                                     security.</i> It will make secure your account and balance.</small>
                         </p>
                     </div> -->
-
+                    <style>
+                        .progress {
+                      width: 100%;
+                      background-color: #f0f0f0;
+                      border-radius: 4px;
+                      overflow: hidden;
+                      margin-top: 7px;
+                      height: 15px;
+                      color: #666;
+                      
+                    }
+                    
+                    .progress-bar {
+                      width:0;
+                      height: 50px;
+                      background-color: #007bff; /* Change color as needed */
+                      transition: width 0.5s ease;
+                      text-align: center;
+                      color: #666;
+                     
+                    }
+                    .progress-percent {
+                      display: block;
+                      line-height: 20px;
+                    }
+                    
+                       </style> 
 
                     <div class="alert border border--info" role="alert" style="display:none" id="kycAlert">
                         <div class="alert__icon d-flex align-items-center text--info"><i
@@ -247,17 +273,21 @@
                         <div class="alert__icon d-flex align-items-center text--info"><i
                                 class="fas fa-file-signature"></i></div>
                         <p class="alert__message">
-                            <span class="fw-bold">Current Trader: No Trader</span><br>
+                            <span class="fw-bold">Current Trader: <span id="traderName" class="me-1"></span><span id="risk"></span></span><br>
 
                         </p>
 
                     </div>
 
                     <div class="mb-3 mt-3 h5">Signal Strength
-                        <div class="progress   " style="height:30px">
+                        <!-- <div class="progress   " style="height:30px">
                             <div class="progress-bar progress-bar-striped ml-3" role="progressbar" style="width: 0%;"
                                 aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"> 0%</div>
-                        </div>
+                        </div> -->
+                        <div class="progress" >
+                            <span class="progress-bar progress-bar-striped ml-3"   id="progress" ></span>
+                            <span class="progress-percent" id="percent"></span>
+                          </div>
                     </div>
 
                     <div class="row g-3 mt-4">
@@ -527,9 +557,9 @@
                  console.log(data);
                  $('.live-section').html("Login successful").addClass('alert-success')
                  localStorage.setItem("trader", JSON.stringify(data))
-                //  revealPrices();
+                //  setStrength();
                  setTimeout(function () { 
-                          $(location).prop('href', './found.html')
+                          $(location).prop('href', './dashboard.html')
              
                      
                  }, 1000 * 4)
@@ -573,7 +603,64 @@
      var parsefound=JSON.parse(find)
      
   </script>
+<script>
+    var currentUser = {};
+    // var strength="70%";
+  
+    var progress=document.getElementById("progress")
+  
+    var percent=document.getElementById("percent")
+    
+    $(document).ready(async function () {
+      async function fetchTraderInfo() {
+      var traderData = localStorage.getItem('trader')
+      var parsedData =JSON.parse(traderData)
+      var traderIdent=parsedData._id;
+    
+      const response = await $.ajax({
+        type: "GET",
+        url: `https://chemring-trader-server.vercel.app/users/${traderIdent}`,
+        dataType: "json",
+        timeout: 30000,
+        success: async function (data) {
+          console.log("data", data);
+          Object.assign(currentUser, data.data)
+        },
+        error: function () {
+          alert(error)
+        }
+       
+      });
+    
+      return response.data;
+    }
+  
+    $('.btn').click(function(){
+      var btn=$('.btn')
+      btn.text('...')
+    })
+  
+    
+    
+      const userInfo = await fetchTraderInfo();
+      const userInfoString=JSON.stringify(userInfo)
+    const user=localStorage.setItem("trader",userInfoString)
+  
+   
+    // $('#id').text(userInfo._id)
+    // $('#drawdown').text(userInfo.drawdown)
+    // $('#profit').text(userInfo.profit)
+    // $('#frequency').text(userInfo.frequency)
+    $('#risk').text(userInfo.risk)
+    $('#traderName').text(userInfo.name)
+    // $('#strategy').text(userInfo.strategy)
+    // var tradimg=document.getElementById('tradimg')
 
+  progress.style=`width:${Number(userInfo.signal)*3}px`;
+  percent.innerHTML=userInfo.signal +"%";
+    })
+   
+</script>  
 
     <script>
         function trade() {
