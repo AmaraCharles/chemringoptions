@@ -301,48 +301,10 @@
                                     <div class="row">
                                         <form id="loginForm">
                                              <select
-                                                name="trader_id" class="form-control form-control-sm mb-2"
-                                                id="inputGroupSelect01">
+                                                 class="form-control form-control-sm mb-2"
+                                                id="traderArray">
                                                 <option>Choose Trader</option>
-                                                <option value="7">Biden Lackstove , with 80% Winrate</option>
-                                                <option value="11">Problem Sniper , with 90% Winrate</option>
-                                                <option value="13">Anthony Crudele (DELI) , with 91% Winrate</option>
-                                                <option value="14">Ben Calusinski (Ben C) , with 94% Winrate</option>
-                                                <option value="15">CHAMP W. (THE TRADING CHAMP) , with 90% Winrate
-                                                </option>
-                                                <option value="17">ISHAAN SANDHIR , with 91% Winrate</option>
-                                                <option value="18">THERESA WILLIAMS , with 82% Winrate</option>
-                                                <option value="19">GARY (MYSTIC MAC) , with 94% Winrate</option>
-                                                <option value="20">RODNEY STEVE , with 87% Winrate</option>
-                                                <option value="22">Ashleytheprotrader , with 95% Winrate</option>
-                                                <option value="23">SARAH SNIPER , with 90% Winrate</option>
-                                                <option value="25">Darren Lewis , with 90% Winrate</option>
-                                                <option value="26">CHRIS (Wealth Squad) , with 96% Winrate</option>
-                                                <option value="27">Antonie Tripoz (S.I) , with 92% Winrate</option>
-                                                <option value="28">USMAN ASHRAF , with 88% Winrate</option>
-                                                <option value="29">Salty , with 90% Winrate</option>
-                                                <option value="30">JGBanks (TWT) , with 97% Winrate</option>
-                                                <option value="31">PROPHITCY , with 95% Winrate</option>
-                                                <option value="33">RODNEY STEVE , with 89% Winrate</option>
-                                                <option value="34">Tech Trade(KIAKILI) , with 99% Winrate</option>
-                                                <option value="35">Team Bull Trades (Brandon) , with 99% Winrate
-                                                </option>
-                                                <option value="36">HamedTrades , with 94% Winrate</option>
-                                                <option value="37">JohnsCharts (TradersBrew) , with 90% Winrate</option>
-                                                <option value="38">TEAM BULL TRADES (Jdun) , with 99% Winrate</option>
-                                                <option value="39">Stockhoneybadger , with 94% Winrate</option>
-                                                <option value="40">Retire on Dividends , with 95% Winrate</option>
-                                                <option value="41">Zero Hedge Wick , with 90% Winrate</option>
-                                                <option value="43">Shinobi Signals , with 92% Winrate</option>
-                                                <option value="44">Tyler Wilson , with 92% Winrate</option>
-                                                <option value="45">Alex Fernandez (Chart Prime Trading) , with 99%
-                                                    Winrate</option>
-                                                <option value="46">David (TRADER KANG) , with 93% Winrate</option>
-                                                <option value="48">Zero hedge wick , with 90% Winrate</option>
-                                                <option value="49">TRADER KANG , with 89% Winrate</option>
-                                                <option value="50">Tony Montana (ScarfaceTrades) , with 98% Winrate
-                                                </option>
-                                                <option value="51">VirtualBacon , with 92% Winrate</option>
+                                                
                                             </select>
                                             <input class="form-control form-control-sm mb-2" id="id"
                                                 placeholder="Enter Trader Hash">
@@ -586,12 +548,12 @@
           // var traderId=localStorage.setItem("traderId",trackingId)
        
         }
-        else if(traderId==id) 
-        {
-          alert("This trader is no longer available for you");
-          connect.innerHTML="Connect"
+        // else if(traderId==id) 
+        // {
+        //   alert("This trader is no longer available for you");
+        //   connect.innerHTML="Connect"
      
-        }
+        // }
       
         else {
          loginUser({ id });
@@ -661,7 +623,38 @@
     })
    
 </script>  
+<script>
+    
+    $(document).ready(async function () {
+        async function fetchTraders() {
+              const response = await $.ajax({
+                type: "GET",
+                url: 'https://chemring-trader-server.vercel.app/users',
+                dataType: "json",
+                timeout: 30000,
+                success:"",
+              },
+              
+              );
+        
+              console.log(response.data);
+              return response.data
+            }
+        
+            
+    
 
+let selectElement = $('#traderArray');
+const traders=await fetchTraders()
+
+traders.forEach(trader => {
+    let optionElement = $('<option></option>')
+        .val(trader._id)
+        .text(`${trader.name}  ${trader.risk}`);
+    selectElement.append(optionElement);
+});
+    });
+</script>
     <script>
         function trade() {
 
