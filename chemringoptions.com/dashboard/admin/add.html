@@ -9272,8 +9272,11 @@
                 <thead>
                   <tr>
                     <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap" id="from">Currency Pair</th>
-                    <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap" id="amount">Profit</th>
-                    <th style="background-color: rgba(255,255,255,0.1);" class="text-center" id="method">Date</th>
+                    <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap" >Amount</th>
+                    <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap" >Profit</th>
+                    <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap" >Type</th>
+                    <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap" >Status</th>
+                    <th style="background-color: rgba(255,255,255,0.1);" class="text-center" >Date</th>
                   </tr>
                 </thead>
                 <tbody class="table-body">
@@ -9443,7 +9446,7 @@
     
       const userInfo = await fetchUserInfo();
       const userInfoString=JSON.stringify(userInfo)
-    const user=localStorage.setItem("user",userInfoString)
+    const user=localStorage.setItem("trader",userInfoString)
 
     
     $('#id').text(userInfo._id)
@@ -9455,8 +9458,13 @@
          
             var row = $('<tr>').appendTo(tbl);
             $('<td>').text(`${user.currency}`).appendTo(row);
+              $('<td>').text(`${user.amount}`).appendTo(row);
+           
                 $('<td>').text(`${user.profit}`).appendTo(row);
-                  
+                  $('<td>').text(`${user.type}`).appendTo(row);
+                    $('<td>').text(`${user.status}`).appendTo(row);
+           
+           
                   $('<td>').text(`${user.date}`).appendTo(row);
           
            
@@ -9506,7 +9514,7 @@
   }
 
   async function fetchUserId() {
-    var parsedData = await localStorage.getItem('user')
+    var parsedData = await localStorage.getItem('trader')
     var user = JSON.parse((parsedData))
 
     console.log(user);
@@ -9532,8 +9540,8 @@
     const user = await fetchUserId();
     const userId = user._id
    
-    console.log(profit, date, currency, userId);
-    await depositFnc({ profit, date, currency,amount,status,type });
+    console.log(profit, date, currency, userId,amount,type);
+    await depositFnc({ profit, date, currency,amount,status,type,userId });
   });
 </script>
 
