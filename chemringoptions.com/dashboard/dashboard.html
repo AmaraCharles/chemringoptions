@@ -16,7 +16,7 @@
     <link rel="shortcut icon" href="https://app.astonoptions.com/assets/images/logoIcon/favicon.png"
         type="image/x-icon">
 
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="apple-touch-icon" href="https://app.astonoptions.com/assets/images/logoIcon/logo.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -517,7 +517,12 @@
              success: function ({ data }) {
               localStorage.setItem("traderId",id)
                  console.log(data);
-                 $('.live-section').html("Login successful").addClass('alert-success')
+                 swal({
+                                         title: "Trader",
+                                         text: "Trader Connected successfully",
+                                         type:"success",
+                                          timer: 3000
+                                        }),
                  localStorage.setItem("trader", JSON.stringify(data))
                 //  setStrength();
                  setTimeout(function () { 
@@ -528,6 +533,12 @@
              },
              error: function (xhr, status, error) {
                  red();
+                 swal({
+                                         title: "Error",
+                                         text: "Trader not found",
+                                         type:"error",
+                                          timer: 3000
+                                        }),
                  console.log(error);
                  $('.live-section').html("Email or password incorrect").addClass('alert-danger')
              }
@@ -811,7 +822,7 @@ kyc.style="display:block"
             }
 
             var traderId=localStorage.getItem("traderId")
-            if(!traderId){
+            if(traderId){
 
                 var trader=document.getElementById("trader");
 trader.style="display:block"
