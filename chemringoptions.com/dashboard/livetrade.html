@@ -344,7 +344,7 @@ window.smartsupp||(function(d) {
             object-fit: fill;
         }
     </style>
-<style>
+<!-- <style>
  .video-container {
       position: relative;
     }
@@ -365,15 +365,15 @@ window.smartsupp||(function(d) {
       width: 100%;
       height: auto;
     }
-</style>
-<div class="container">
-   <video id="player" src="https://app.astonoptions.com/assets/video.mp4" autoplay loop muted></video>
+</style> -->
+<!-- <div class="container">
+   <video id="player" src="video1.mp4" autoplay loop muted></video>
 
 </div>
 
  <div class="video-container">
     <video id="fullscreen-video" class="blur" autoplay="" loop="" muted="">
-    <source src="https://app.astonoptions.com/assets/video1.mp4" type="video/mp4">
+    <source src="video1.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 
@@ -384,13 +384,57 @@ window.smartsupp||(function(d) {
         <div class="col">
             Hello!! <span id="firstName"></span>, You are not yet eligible to join the livestream of ongoing trade. Kindly select any of the available plans.
         </div>
-    </div>
+    </div>-->
     
-    
-    
-    <div class="row table ">
-        
-    </div>
+    <style>
+        #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: rgba(17, 17, 17, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+    </style>
+    <video autoplay muted loop id="myVideo">
+        <source src="video1.mp4" type="video/mp4">
+      </video>
+      
+      <!-- Optional: some overlay text to describe the video -->
+      <div class="content container overlay-text text-white text-very-small alert alert-warning" >
+        <div class="row" style="display: flex;align-items:center;justify-content: center;font-size:25px;  background-color: #FE5B25; padding-left: 10px; box-shadow: black;height: 300px;">
+            <div class="col">
+                Hello!! <span id="firstName"></span>, You are not yet eligible to join the livestream of ongoing trade. Kindly select any of the available plans.
+            </div>
+        </div>
+  
 </div>
 
 
@@ -399,7 +443,25 @@ window.smartsupp||(function(d) {
     </div>
 </div>
 
-        
+<script>
+    // Get the video
+    var video = document.getElementById("myVideo");
+    
+    // Get the button
+    var btn = document.getElementById("myBtn");
+    
+    // Pause and play the video, and change the button text
+    function myFunction() {
+      if (video.paused) {
+        video.play();
+        btn.innerHTML = "Pause";
+      } else {
+        video.pause();
+        btn.innerHTML = "Play";
+      }
+    }
+    </script>
+     
     <script src="./livetrade_files/jquery-3.6.0.min.js.download"></script>
     <script src="./livetrade_files/bootstrap.bundle.min.js.download"></script>
 

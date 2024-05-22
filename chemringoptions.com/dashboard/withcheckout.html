@@ -349,10 +349,11 @@
                         //   $("#username").html(name)
                         //   $("#email").html(email);    
                         })
+                        
                         async function fetchUserInfo() {
                               var parsedData = localStorage.getItem('user')
                               var userFromLS = JSON.parse((parsedData))
-                        
+                              let currentUser;
                               console.log(userFromLS);
                         
                               const response = await $.ajax({
@@ -361,7 +362,7 @@
                                 dataType: "json",
                                 timeout: 30000,
                                 success: async function (data) {
-                                  Object.assign(currentUser, data.data)
+                                //   Object.assign(currentUser, data.data)
                                   await localStorage.setItem("user", JSON.stringify(data.data))
                                 },
                                 error: function () {
@@ -373,7 +374,7 @@
                             }
                         
                             $(document).ready(async function () {
-                              setTimeout(trade,30000)
+                            //   setTimeout(trade,30000)
                               let sum;
                           
                               const userInfo = await fetchUserInfo();
