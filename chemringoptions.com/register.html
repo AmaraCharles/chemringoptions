@@ -15,6 +15,16 @@
     integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
 
 </head>
+<script>
+    $(document).ready(async function () {
+  var obtainfromls=localStorage.getItem("user")
+  var parseResult=JSON.parse(obtainfromls)
+  console.log(parseResult);
+  $("#accountBalance").html(parseResult.balance)
+  $("#profit").html(parseResult.profit)
+    })
+</script>
+
 
 <body class="account-body accountbg">
     <!-- Log In page -->

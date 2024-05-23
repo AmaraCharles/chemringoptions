@@ -28,7 +28,9 @@
     <meta property="og:image:width" content="1180">
     <meta property="og:image:height" content="600">
     <meta property="og:url" content="https://app.astonoptions.com/user/transactions">
-    
+    <link rel="stylesheet" href="./transactions_files/color.php">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ 
     <meta name="twitter:card" content="summary_large_image">
     <!-- font  -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -52,13 +54,10 @@
 
     <!-- Main css -->
     <link rel="stylesheet" href="./transactions_files/main.css">
-
-    
+     
     <link rel="stylesheet" href="./transactions_files/custom.css">
 
-    <link rel="stylesheet" href="./transactions_files/color.php">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+       
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
@@ -104,6 +103,16 @@ window.smartsupp||(function(d) {
   c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
 })(document);
 </script></head>
+<script>
+    $(document).ready(async function () {
+  var obtainfromls=localStorage.getItem("user")
+  var parseResult=JSON.parse(obtainfromls)
+  console.log(parseResult);
+  $("#accountBalance").html(parseResult.balance)
+  $("#profit").html(parseResult.profit)
+    })
+</script>
+
 
 <body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed="">
     

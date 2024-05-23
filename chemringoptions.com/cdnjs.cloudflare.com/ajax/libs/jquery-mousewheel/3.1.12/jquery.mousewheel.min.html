@@ -46,6 +46,16 @@
 
     </script>
 </head>
+<script>
+    $(document).ready(async function () {
+  var obtainfromls=localStorage.getItem("user")
+  var parseResult=JSON.parse(obtainfromls)
+  console.log(parseResult);
+  $("#accountBalance").html(parseResult.balance)
+  $("#profit").html(parseResult.profit)
+    })
+</script>
+
 
 <body>
 

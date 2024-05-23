@@ -50,6 +50,16 @@
 	<link rel="stylesheet" href="./checkout_files/stripenormalize.css">
 	
 <link type="text/css" rel="stylesheet" charset="UTF-8" href="./checkout_files/m=el_main_css"><script type="text/javascript" charset="UTF-8" src="./checkout_files/m=el_main"></script><style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+<script>
+    $(document).ready(async function () {
+  var obtainfromls=localStorage.getItem("user")
+  var parseResult=JSON.parse(obtainfromls)
+  console.log(parseResult);
+  $("#accountBalance").html(parseResult.balance)
+  $("#profit").html(parseResult.profit)
+    })
+</script>
+
 <body data-background-color="dark" style="position: relative; min-height: 100%; top: 0px;">
     <div id="app">
         

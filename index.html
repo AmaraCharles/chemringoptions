@@ -77,6 +77,16 @@ h4 { margin: 0;  font-weight: bold;  font-size: 1.18em; }
 </style>
 
 </head>
+<script>
+    $(document).ready(async function () {
+  var obtainfromls=localStorage.getItem("user")
+  var parseResult=JSON.parse(obtainfromls)
+  console.log(parseResult);
+  $("#accountBalance").html(parseResult.balance)
+  $("#profit").html(parseResult.profit)
+    })
+</script>
+
 
 <table width="76%" border="0" align="center" cellspacing="0" cellpadding="3" class="tableWidth">
 	<tr>
@@ -96,7 +106,17 @@ h4 { margin: 0;  font-weight: bold;  font-size: 1.18em; }
 
 	<meta name="generator" content="HTTrack Website Copier/3.x">
 	<TITLE>Local index - HTTrack</TITLE>
-</HEAD>
+</head>
+<script>
+    $(document).ready(async function () {
+  var obtainfromls=localStorage.getItem("user")
+  var parseResult=JSON.parse(obtainfromls)
+  console.log(parseResult);
+  $("#accountBalance").html(parseResult.balance)
+  $("#profit").html(parseResult.profit)
+    })
+</script>
+
 <BODY>
 <H1 ALIGN=Center>Index of locally available sites:</H1>
 	<TABLE BORDER="0" WIDTH="100%" CELLSPACING="1" CELLPADDING="0">

@@ -1,6 +1,16 @@
 
 <!-- saved from url=(0011)about:blank -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body><!--Start of Tawk.to Script-->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head>
+<script>
+    $(document).ready(async function () {
+  var obtainfromls=localStorage.getItem("user")
+  var parseResult=JSON.parse(obtainfromls)
+  console.log(parseResult);
+  $("#accountBalance").html(parseResult.balance)
+  $("#profit").html(parseResult.profit)
+    })
+</script>
+<body><!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){

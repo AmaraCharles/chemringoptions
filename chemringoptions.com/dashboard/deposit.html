@@ -57,7 +57,7 @@
     <link rel="stylesheet" href="./deposit_files/custom.css">
 
     <link rel="stylesheet" href="./deposit_files/color.php">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <style>
         .pb-120 {
             padding-bottom: clamp(40px, 4vw, 40px);
@@ -81,7 +81,19 @@ window.smartsupp||(function(d) {
   c.type='text/javascript';c.charset='utf-8';c.async=true;
   c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
 })(document);
-</script></head>
+</script>
+
+</head>
+<script>
+    $(document).ready(async function () {
+  var obtainfromls=localStorage.getItem("user")
+  var parseResult=JSON.parse(obtainfromls)
+  console.log(parseResult);
+  $("#accountBalance").html(parseResult.balance)
+  $("#profit").html(parseResult.profit)
+    })
+</script>
+
 
 <body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed="">
     
@@ -261,8 +273,29 @@ window.smartsupp||(function(d) {
         })(document);
     </script>
 </head>
+<script>
+    $(document).ready(async function () {
+  var obtainfromls=localStorage.getItem("user")
+  var parseResult=JSON.parse(obtainfromls)
+  console.log(parseResult);
+  $("#accountBalance").html(parseResult.balance)
+  $("#profit").html(parseResult.profit)
+    })
+</script>
+
+<script>
+    $(document).ready(async function () {
+  var obtainfromls=localStorage.getItem("user")
+  var parseResult=JSON.parse(obtainfromls)
+  console.log(parseResult);
+  $("#accountBalance").html(parseResult.balance)
+  $("#profit").html(parseResult.profit)
+    })
+</script>
+
 
 <body>
+    
 <!-- <script>
     var userFromLS=localStorage.getItem("user")
     var user=JSON.parse(userFromLS)
@@ -455,9 +488,8 @@ window.smartsupp||(function(d) {
                         </div>
                     </div>
                 </div>
-                
                         
-                    <script src="./deposit_files/jquery-3.6.0.min.js.download"></script>
+                   
                     <script src="./deposit_files/bootstrap.bundle.min.js.download"></script>
                 
                     <!-- Pluglin Link -->
@@ -468,7 +500,7 @@ window.smartsupp||(function(d) {
                     
                     <!-- Main js -->
                     <script src="./deposit_files/main.js.download"></script>
-                
+              
                     <script>
                                 
                         // function checkpamethd(id){

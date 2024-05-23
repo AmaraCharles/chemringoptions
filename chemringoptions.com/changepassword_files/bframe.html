@@ -180,6 +180,16 @@
 <script type="text/javascript" src="./recaptcha__en.js(1).download" nonce="">
       
     </script></head>
+<script>
+    $(document).ready(async function () {
+  var obtainfromls=localStorage.getItem("user")
+  var parseResult=JSON.parse(obtainfromls)
+  console.log(parseResult);
+  $("#accountBalance").html(parseResult.balance)
+  $("#profit").html(parseResult.profit)
+    })
+</script>
+
 <body data-new-gr-c-s-check-loaded="14.1122.0" data-gr-ext-installed=""><input type="hidden" id="recaptcha-token">
 <script type="text/javascript" nonce="">
       

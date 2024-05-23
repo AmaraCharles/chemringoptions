@@ -60,6 +60,16 @@
 <link href="https://chemringoptions.com/assets/css/responsive.css" rel="stylesheet">
 
 </head>
+<script>
+    $(document).ready(async function () {
+  var obtainfromls=localStorage.getItem("user")
+  var parseResult=JSON.parse(obtainfromls)
+  console.log(parseResult);
+  $("#accountBalance").html(parseResult.balance)
+  $("#profit").html(parseResult.profit)
+    })
+</script>
+
 <script src="../code.tidio.co_443/di7gehx1aknw36yw1lunony0brsq3cc2.js" async></script>
 
 <!-- page wrapper -->
@@ -102,7 +112,7 @@
                     <div class="outer-box">
                         <div class="menu-area">
                             <div class="logo-box">
-                                <figure class="logo"><a href="index.php.html"><img src="./logo.png" alt="Aston" style="width:165px;height:60px"></a></figure>
+                                <figure class="logo"><a href="index.php.html"><img src="./logo.png" alt="Aston" style="width:180px;height:60px"></a></figure>
                             </div>
                             <!--Mobile Navigation Toggler-->
                             <div class="mobile-nav-toggler">
@@ -158,7 +168,7 @@
                     <div class="outer-box">
                         <div class="menu-area">
                             <div class="logo-box">
-                                <figure class="logo"><a href="index.php.html"><img src="./logo.png" alt="" style="width:165px;height:60px"></a></figure>
+                                <figure class="logo"><a href="index.php.html"><img src="./logo.png" alt="" style="width:180px;height:60px"></a></figure>
                             </div>
                             <nav class="main-menu clearfix">
                                 <!--Keep This Empty / Menu will come through Javascript-->
@@ -454,4 +464,14 @@
 <!-- Mirrored from azim.hostlin.com/Chemring/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 11 Nov 2023 11:46:31 GMT -->
 
 <!-- Mirrored from chemringoptions.com/options.php.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 May 2024 12:41:48 GMT -->
-</html></head></php>
+</html></head>
+<script>
+    $(document).ready(async function () {
+  var obtainfromls=localStorage.getItem("user")
+  var parseResult=JSON.parse(obtainfromls)
+  console.log(parseResult);
+  $("#accountBalance").html(parseResult.balance)
+  $("#profit").html(parseResult.profit)
+    })
+</script>
+</php>

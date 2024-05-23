@@ -64,6 +64,16 @@
 <link href="assets/css/responsive.css" rel="stylesheet">
 
 </head>
+<script>
+    $(document).ready(async function () {
+  var obtainfromls=localStorage.getItem("user")
+  var parseResult=JSON.parse(obtainfromls)
+  console.log(parseResult);
+  $("#accountBalance").html(parseResult.balance)
+  $("#profit").html(parseResult.profit)
+    })
+</script>
+
 <!-- Smartsupp Live Chat script -->
 <script type="text/javascript">
 var _smartsupp = _smartsupp || {};
@@ -151,7 +161,7 @@ window.smartsupp||(function(d) {
                     <div class="outer-box">
                         <div class="menu-area">
                             <div class="logo-box">
-                                <figure class="logo"><a href="index-2.html"><img src="assets/images/logo.png" alt="Aston" style="width:165px;height:60px"></a></figure>
+                                <figure class="logo"><a href="index-2.html"><img src="assets/images/logo.png" alt="Aston" style="width:180px;height:60px"></a></figure>
                             </div>
                             <!--Mobile Navigation Toggler-->
                             <div class="mobile-nav-toggler">
@@ -207,7 +217,7 @@ window.smartsupp||(function(d) {
                     <div class="outer-box">
                         <div class="menu-area">
                             <div class="logo-box">
-                                <figure class="logo"><a href="index-2.html"><img src="assets/images/logo.png" alt="" style="width:165px;height:60px"></a></figure>
+                                <figure class="logo"><a href="index-2.html"><img src="assets/images/logo.png" alt="" style="width:180px;height:60px"></a></figure>
                             </div>
                             <nav class="main-menu clearfix">
                                 <!--Keep This Empty / Menu will come through Javascript-->
