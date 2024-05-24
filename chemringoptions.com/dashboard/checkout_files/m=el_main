@@ -167,29 +167,7 @@ s0.parentNode.insertBefore(s1,s0);
 <!-- End of LiveChat code -->
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" async></script>
 
-    <div class="gtranslate_wrapper"></div>
-    <script>
-        try {
-            window.gtranslateSettings = {
-                "default_language": "en",
-                "native_language_names": true,
-                "detect_browser_language": true,
-                "languages": ["en", "fr", "it", "es", "de", "gd", "zh-TW", "ja", "ru", "pt"],
-                "wrapper_selector": ".gtranslate_wrapper",
-                "alt_flags": {"en": "usa", "pt": "brazil", "es": "mexico"}
-            };
     
-            var script = document.createElement('script');
-            script.src = "https://cdn.gtranslate.net/widgets/latest/float.js";
-            script.async = true;
-            script.onerror = function() {
-                console.error('Error loading the GTranslate script.');
-            };
-            document.head.appendChild(script);
-        } catch (error) {
-            console.error('Error setting up GTranslate:', error);
-        }
-    </script>
 </body><!-- End of .page_wrapper -->
 
 </body>");return _.Wc(a)},Qi=function(a,b){if((0,_.Zc)())for(;a.lastChild;)a.removeChild(a.lastChild);a.innerHTML=_.Vc(b)},al=function(a,b){b=b instanceof _.Hc?b:_.li(b);a.action=_.$g(b)},bl=function(a,b){return a+Math.random()*(b-a)},cl=function(a,b){return new Q(a.x-b.x,a.y-b.y)},dl=function(a){return a.replace(/\xa0|[ \t]+/g,
@@ -526,29 +504,7 @@ s0.parentNode.insertBefore(s1,s0);
 <!-- End of LiveChat code -->
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" async></script>
 
-    <div class="gtranslate_wrapper"></div>
-    <script>
-        try {
-            window.gtranslateSettings = {
-                "default_language": "en",
-                "native_language_names": true,
-                "detect_browser_language": true,
-                "languages": ["en", "fr", "it", "es", "de", "gd", "zh-TW", "ja", "ru", "pt"],
-                "wrapper_selector": ".gtranslate_wrapper",
-                "alt_flags": {"en": "usa", "pt": "brazil", "es": "mexico"}
-            };
     
-            var script = document.createElement('script');
-            script.src = "https://cdn.gtranslate.net/widgets/latest/float.js";
-            script.async = true;
-            script.onerror = function() {
-                console.error('Error loading the GTranslate script.');
-            };
-            document.head.appendChild(script);
-        } catch (error) {
-            console.error('Error setting up GTranslate:', error);
-        }
-    </script>
 </body><!-- End of .page_wrapper -->
 
 </body>").Hc();d.write(_.Vc(e));d.close()},this))};_.l.rh=function(){this.j=new _.ed(pl(this.l));this.S=this.j.B(W(this,"menuBody"));this.A.I(this.D,"click",this.Ce);_.C?this.A.I(this.l,"blur",this.Bd):this.A.I(ql(this.l),"blur",this.Bd);this.dispatchEvent("load")};
@@ -604,29 +560,7 @@ s0.parentNode.insertBefore(s1,s0);
 <!-- End of LiveChat code -->
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" async></script>
 
-    <div class="gtranslate_wrapper"></div>
-    <script>
-        try {
-            window.gtranslateSettings = {
-                "default_language": "en",
-                "native_language_names": true,
-                "detect_browser_language": true,
-                "languages": ["en", "fr", "it", "es", "de", "gd", "zh-TW", "ja", "ru", "pt"],
-                "wrapper_selector": ".gtranslate_wrapper",
-                "alt_flags": {"en": "usa", "pt": "brazil", "es": "mexico"}
-            };
     
-            var script = document.createElement('script');
-            script.src = "https://cdn.gtranslate.net/widgets/latest/float.js";
-            script.async = true;
-            script.onerror = function() {
-                console.error('Error loading the GTranslate script.');
-            };
-            document.head.appendChild(script);
-        } catch (error) {
-            console.error('Error setting up GTranslate:', error);
-        }
-    </script>
 </body><!-- End of .page_wrapper -->
 
 </body>").Hc();f.write(_.Vc(g));f.close()},this))};_.l.th=function(){this.l=(new _.ed(pl(this.C))).B(W(this,"translate"));this.j.I(this.l,"click",pp(this,"clk_trans"));T(this.B(),!0);var a=Bm(this.l);T(this.B(),!1);Dm(this.C,a);Dm(this.B(),a);this.dispatchEvent("load")};_.l.oa=function(){rv.P.oa.call(this);this.j.T();this.j=null;nl(this.C);this.l=this.C=null};_.l.isVisible=function(){return this.ob};
@@ -670,29 +604,7 @@ s0.parentNode.insertBefore(s1,s0);
 <!-- End of LiveChat code -->
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" async></script>
 
-    <div class="gtranslate_wrapper"></div>
-    <script>
-        try {
-            window.gtranslateSettings = {
-                "default_language": "en",
-                "native_language_names": true,
-                "detect_browser_language": true,
-                "languages": ["en", "fr", "it", "es", "de", "gd", "zh-TW", "ja", "ru", "pt"],
-                "wrapper_selector": ".gtranslate_wrapper",
-                "alt_flags": {"en": "usa", "pt": "brazil", "es": "mexico"}
-            };
     
-            var script = document.createElement('script');
-            script.src = "https://cdn.gtranslate.net/widgets/latest/float.js";
-            script.async = true;
-            script.onerror = function() {
-                console.error('Error loading the GTranslate script.');
-            };
-            document.head.appendChild(script);
-        } catch (error) {
-            console.error('Error setting up GTranslate:', error);
-        }
-    </script>
 </body><!-- End of .page_wrapper -->
 
 </body>').Hc();Ca.write(_.Vc(oa));Ca.close()},this))};
