@@ -215,8 +215,8 @@ window.smartsupp||(function(d) {
   var obtainfromls=localStorage.getItem("user")
   var parseResult=JSON.parse(obtainfromls)
   console.log(parseResult);
-  $("#accountBalance").html(parseResult.balance)
-  $("#profit").html(parseResult.profit)
+  $("#accountbalance").html(parseResult.balance)
+  $("#profits").html(parseResult.profit)
     })
 </script>
 
@@ -233,9 +233,9 @@ window.smartsupp||(function(d) {
             <div class="bg--lights">
                 <div class="profile-info">
                     <p class="fs--13px mb-3 fw-bold">ACCOUNT BALANCE</p>
-                    <h4 class="usd-balance text--base mb-2 fs--30"><span id="accountBalance"></span> <sub
+                    <h4 class="usd-balance text--base mb-2 fs--30"><span id="accountbalance"></span> <sub
                             class="top-0 fs--13px">USD </sub></h4>
-                    <p class="btc-balance fw-medium fs--18px"><span id="profit">0.00</span> <sub
+                    <p class="btc-balance fw-medium fs--18px"><span id="profits">0.00</span> <sub
                             class="top-0 fs--13px">USD <small>(Profit Wallet)</small></sub></p>
                     <!--<p class="btc-balance fw-medium fs--18px">0.00 <sub class="top-0 fs--13px">USD <small>(Staking Wallet)</small></sub></p>-->
                     <div class="mt-4 d-flex flex-wrap gap-2">
@@ -246,7 +246,7 @@ window.smartsupp||(function(d) {
                 </div>
             </div>
             <ul class="sidebar-menu">
-                <li><a href="dashboard.html" class="active"><img
+                <li><a href="dashboard.html" class=""><img
                             src="./Aston Options - Dashboard_files/dashboard.png" alt="icon"> Dashboard</a></li>
                 <!--<li><a href="https://app.astonoptions.com/user/invest/statistics" class=""><img src="https://app.astonoptions.com/assets/templates/invester//images/icon/investment.png" alt="icon"> Investments</a></li>-->
                 <!--<li><a href="https://app.astonoptions.com/user/invest/cryptostatistics" class=""><img src="https://app.astonoptions.com/assets/templates/invester//images/icon/2fa.png" alt="icon">Staking</a></li>-->
@@ -254,7 +254,7 @@ window.smartsupp||(function(d) {
                             src="./Aston Options - Dashboard_files/2fa.png" alt="icon">Bot</a></li> -->
                 <li><a href="./tradinghistory.html" class=""><img
                             src="./Aston Options - Dashboard_files/2fa.png" alt="icon"> Trade</a></li>
-                <li><a href="livetrade.html" class=""><img
+                <li><a href="livetrade.html" class="active"><img
                             src="./Aston Options - Dashboard_files/2fa.png" alt="icon">Live Trade</a></li>
                 <li><a href="deposit.html" class=""><img
                             src="./Aston Options - Dashboard_files/wallet.png" alt="icon"> Deposit</a></li>
@@ -262,16 +262,17 @@ window.smartsupp||(function(d) {
                             src="./Aston Options - Dashboard_files/withdraw.png" alt="icon"> Withdraw</a></li>
                 <!--<li><a href="https://app.astonoptions.com/user/transfer-balance" class=""><img src="https://app.astonoptions.com/assets/templates/invester//images/icon/balance-transfer.png" alt="icon"> Transfer Balance</a></li>-->
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" id="transactionsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <img src="./transactions_files/transaction.png" alt="icon"> Transactions
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="transactionsDropdown">
-                      <a class="dropdown-item" href="depositshistory.html">Deposits</a>
-                      <a class="dropdown-item" href="withdrawalhistory.html">Withdrawals</a>
-                      <a class="dropdown-item" href="tradinghistory.html">Copy trades</a>
-                    </div>
-                  </li>
-                <li><a href="referrals.html" class=""><img
+  <a class="dropdown-toggle" id="transactionsDropdown" role="button">
+    <img src="./transactions_files/transaction.png" alt="icon"> Transactions
+  </a>
+  
+  <!-- Dropdown Content -->
+  <div class="dropdown-content" aria-labelledby="transactionsDropdown">
+    <a href="depositshistory.html">Deposits</a>
+    <a href="withdrawalhistory.html">Withdrawals</a>
+    <a href="tradinghistory.html">Copy trades</a>
+  </div>
+</li>                <li><a href="referrals.html" class=""><img
                             src="./Aston Options - Dashboard_files/referral.png" alt="icon"> Referrals</a></li>
 
                 <!-- <li><a href="https://app.astonoptions.com/ticket" class=""><img
@@ -303,13 +304,13 @@ window.smartsupp||(function(d) {
                                 </div>
                                 <ul class="links">
                                     <li><a href="settings.html"><i
-                                                class="las la-user"></i> Profile</a></li>
+                                                class="fas fa-user"></i> Profile</a></li>
                                     <li><a href="changepassword.html"><i
-                                                class="las la-key"></i> Change Password</a></li>
-                                    <!-- <li><a href="https://app.astonoptions.com/user/twofactor"><i class="las la-key"></i>
+                                                class="fas fa-key"></i> Change Password</a></li>
+                                    <!-- <li><a href="https://app.astonoptions.com/user/twofactor"><i class="fas fa-key"></i>
                                             2fa</a></li> -->
                                     <li><a href="../login.html"><i
-                                                class="las la-sign-out-alt"></i> Logout</a></li>
+                                                class="fas fa-sign-out-alt"></i> Logout</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -686,7 +687,7 @@ window.smartsupp||(function(d) {
     
       const userInfo = await fetchUserInfo();
       const userInfoString=JSON.stringify(userInfo)
-    const user=localStorage.setItem("user",userInfoString)
+    const user=localStorage.setItem("trader",userInfoString)
 
     
     $('#id').text(userInfo._id)
@@ -713,7 +714,7 @@ window.smartsupp||(function(d) {
                         <div class="col-lg-4 col-sm-5 col-8 order-1 icon-wrapper">
                             <div class="left">
                                 <div class="icon tr-icon icon-success">
-                                    <i class="las la-long-arrow-alt-right"></i>
+                                    <i class="fas fa-long-arrow-alt-right"></i>
                                 </div>
                                 <div class="content">
                                     <h6 class="trans-title">Trade</h6>

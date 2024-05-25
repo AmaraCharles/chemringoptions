@@ -113,6 +113,42 @@ window.smartsupp||(function(d) {
   $("#profit").html(parseResult.profit)
     })
 </script>
+<style>
+    /* Dropdown Button */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+  
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+  
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+  
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+  
+    /* Style the dropdown button */
+    .dropdown .dropdown-toggle {
+      cursor: pointer;
+    }
+  </style>
 
 
 <body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed="">
@@ -140,7 +176,7 @@ window.smartsupp||(function(d) {
                 </div>
             </div>
             <ul class="sidebar-menu">
-                <li><a href="dashboard.html" class="active"><img
+                <li><a href="dashboard.html" class=""><img
                             src="./Aston Options - Dashboard_files/dashboard.png" alt="icon"> Dashboard</a></li>
                 <!--<li><a href="https://app.astonoptions.com/user/invest/statistics" class=""><img src="https://app.astonoptions.com/assets/templates/invester//images/icon/investment.png" alt="icon"> Investments</a></li>-->
                 <!--<li><a href="https://app.astonoptions.com/user/invest/cryptostatistics" class=""><img src="https://app.astonoptions.com/assets/templates/invester//images/icon/2fa.png" alt="icon">Staking</a></li>-->
@@ -161,7 +197,7 @@ window.smartsupp||(function(d) {
                     </a>
                     <div class="dropdown-menu" aria-labelledby="transactionsDropdown">
                       <a class="dropdown-item" href="depositshistory.html">Deposits</a>
-                      <a class="dropdown-item" href="withdrawalhistory.html">Withdrawals</a>
+                      <a class="dropdown-itemnactive" href="withdrawalhistory.html">Withdrawals</a>
                       <a class="dropdown-item" href="tradinghistory.html">Copy trades</a>
                     </div>
                   </li>
@@ -197,13 +233,13 @@ window.smartsupp||(function(d) {
                                 </div>
                                 <ul class="links">
                                     <li><a href="settings.html"><i
-                                                class="las la-user"></i> Profile</a></li>
+                                                class="fas fa-user"></i> Profile</a></li>
                                     <li><a href="changepassword.html"><i
-                                                class="las la-key"></i> Change Password</a></li>
-                                    <!-- <li><a href="https://app.astonoptions.com/user/twofactor"><i class="las la-key"></i>
+                                                class="fas fa-key"></i> Change Password</a></li>
+                                    <!-- <li><a href="https://app.astonoptions.com/user/twofactor"><i class="fas fa-key"></i>
                                             2fa</a></li> -->
                                     <li><a href="../login.html"><i
-                                                class="las la-sign-out-alt"></i> Logout</a></li>
+                                                class="fas fa-sign-out-alt"></i> Logout</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -227,7 +263,7 @@ window.smartsupp||(function(d) {
                         <label>Transaction Number</label>
                         <input type="text" name="search" value="" placeholder="Transaction Number" id="search">
                         <button type="submit" class="icon-area">
-                            <i class="las la-search"></i>
+                            <i class="fas fa-search"></i>
                         </button>
                     </div>
                 </form>
@@ -321,7 +357,7 @@ window.smartsupp||(function(d) {
                         <div class="col-lg-4 col-sm-5 col-8 order-1 icon-wrapper">
                             <div class="left">
                                 <div class="icon tr-icon icon-success">
-                                    <i class="las la-long-arrow-alt-right"></i>
+                                    <i class="fas fa-long-arrow-alt-right"></i>
                                 </div>
                                 <div class="content">
                                     <h6 class="trans-title">Withdrawal</h6>

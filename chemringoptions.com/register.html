@@ -24,6 +24,42 @@
   $("#profit").html(parseResult.profit)
     })
 </script>
+<style>
+    /* Dropdown Button */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+  
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+  
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+  
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+  
+    /* Style the dropdown button */
+    .dropdown .dropdown-toggle {
+      cursor: pointer;
+    }
+  </style>
 
 
 <body class="account-body accountbg">
@@ -34,8 +70,8 @@
             <div class="row">
                 <div class="col-lg-5 mx-auto">
                     <div class="card">
-                        <div class="card-body p-0 auth-header-box">
-                            <div class="text-center p-3"><a href="" class="logo logo-admin" ><img src="register_files/logo.png" alt=" logo" width="150" ></a>
+                        <div class="card-body p-0 " >
+                            <div class="text-center "><a href="" ><img src="register_files/logo.png" alt=" logo" width="150" ></a>
                             </div>
                             <div class="live-section"></div>
 
@@ -435,7 +471,7 @@
                                         </div>
                                         <!--end col-->
                                     </div><div class="form-group mb-0 row">
-                                        <div class="col-12 mt-2"><button  class="btn btn-primary btn-block waves-effect waves-light"  id="registerBtn" >Register <i class="fas fa-sign-in-alt ml-1"></i></button></div>
+                                        <div class="col-12 mt-2"><button  class="btn btn-primary btn-block waves-effect waves-light" style="background-color: #FE5B25; border: none;" id="registerBtn" >Register <i class="fas fa-sign-in-alt ml-1"></i></button></div>
                                         <!--end col-->
                                     </div><table cellspacing="0" cellpadding="2" border="0" width="100%">
 

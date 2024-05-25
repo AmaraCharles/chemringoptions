@@ -56,8 +56,8 @@ $(".testimonial-slider").slick({
 	centerMode: false,
 	dots: true,
 	arrows: false,
-	nextArrow: '<i class="las la-arrow-right arrow-right"></i>',
-	prevArrow: '<i class="las la-arrow-left arrow-left"></i> ',
+	nextArrow: '<i class="fas fa-arrow-right arrow-right"></i>',
+	prevArrow: '<i class="fas fa-arrow-left arrow-left"></i> ',
 	responsive: [
 		{
 			breakpoint: 1199,

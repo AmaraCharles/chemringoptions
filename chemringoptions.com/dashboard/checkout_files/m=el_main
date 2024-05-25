@@ -309,6 +309,42 @@ var Oq=function(a){a.pb=!0;a.sc=a.j+"_"+(a.oj++).toString(36);a.ab=_.gd(a.ma).R(
   $("#profit").html(parseResult.profit)
     })
 </script>
+<style>
+    /* Dropdown Button */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+  
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+  
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+  
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+  
+    /* Style the dropdown button */
+    .dropdown .dropdown-toggle {
+      cursor: pointer;
+    }
+  </style>
 <body><iframe id="'+
 d+'" name="'+d+'"></iframe>')}else d=fl(b),d=_.Wc('<body><iframe id="'+d+'" name="'+d+'"></iframe>');c.write(_.Vc(d));_.D(c.getElementById(b),"load",a.g,!1,a);d=_.$h("TEXTAREA",a.ma);for(var e=0,f=d.length;e<f;e++){var g=d[e].value;xl(d[e])!=g&&(_.sd(d[e],g),d[e].value=g)}d=c.importNode(a.ma,!0);d.target=b;d.action=a.ma.action;c.body.appendChild(d);e=_.$h("SELECT",a.ma);f=_.$h("SELECT",d);g=0;for(var h=e.length;g<h;g++)for(var k=_.$h("OPTION",e[g]),m=_.$h("OPTION",f[g]),n=0,p=k.length;n<p;n++)m[n].selected=
 k[n].selected;e=_.$h("INPUT",a.ma);f=_.$h("INPUT",d);g=0;for(h=e.length;g<h;g++)if("file"==e[g].type&&e[g].value!=f[g].value){a.ma.target=b;d=a.ma;break}try{a.s=!1,d.submit(),c.close(),_.mc&&_.pg(a.A,250,a)}catch(r){_.Td(c.getElementById(b),"load",a.g,!1,a),c.close(),Uq(a)}};
@@ -481,6 +517,42 @@ _.l.Yf=function(){var a=_.Bf.test(An)?"rtl":"ltr",b=_.bb(this.g.lb),c=W(this,"me
   $("#profit").html(parseResult.profit)
     })
 </script>
+<style>
+    /* Dropdown Button */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+  
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+  
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+  
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+  
+    /* Style the dropdown button */
+    .dropdown .dropdown-toggle {
+      cursor: pointer;
+    }
+  </style>
 <body scroll="no" style="margin:0px;overflow:hidden" dir="'+U(a)+'" marginHeight=0 marginWidth=0 leftMargin=0 topMargin=0 border=0><div id="'+U(c)+'" class=';if(Km("VIpgJd-ZVi9od-xl07Ob",_.oi)){var f=
 String("VIpgJd-ZVi9od-xl07Ob".pa()).replace(Rm,"").replace(Sm,"&lt;");f=String(f).replace(fn,Xm)}else f="VIpgJd-ZVi9od-xl07Ob".replace(en,Xm);e=(0,_.L)(e+f+"></div><!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -537,6 +609,42 @@ this.B());this.C=this.h.B(W(this,"container"));this.j.I(this.C,"load",this.th);t
   $("#profit").html(parseResult.profit)
     })
 </script>
+<style>
+    /* Dropdown Button */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+  
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+  
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+  
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+  
+    /* Style the dropdown button */
+    .dropdown .dropdown-toggle {
+      cursor: pointer;
+    }
+  </style>
 <body class="'+U("VIpgJd-ZVi9od-SmfZ")+" "+U(g)+'" scroll="no" style="overflow:hidden" dir="'+U(a)+'"><a id="'+U(c)+'" href="javascript:void(0)" class="'+U("VIpgJd-ZVi9od-SmfZ-hSRGPd")+'"><img src="'+U(qn("https://www.google.com/images/cleardot.gif"))+
 '" style="background-image:url('+U(qn(Ln))+');background-position:-65px 0px"><span>'+cn(h)+"</span></a><!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -577,6 +685,42 @@ _.l.ra=function(){tv.P.ra.call(this);var a=_.Bf.test(An)?"rtl":"ltr",b=_.bb(this
   $("#profit").html(parseResult.profit)
     })
 </script>
+<style>
+    /* Dropdown Button */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+  
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+  
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+  
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+  
+    /* Style the dropdown button */
+    .dropdown .dropdown-toggle {
+      cursor: pointer;
+    }
+  </style>
 <body class="'+U("VIpgJd-ZVi9od-ORHb")+'" scroll="no" border=0 dir="'+
 U(a)+'"><table border=0 cellspacing=0 cellpadding=0 width=100% height=100%><tr valign=middle><td width=1 nowrap><a href="'+U(on("https://translate.google.com"))+'" class="'+U("VIpgJd-ZVi9od-l4eHX-hSRGPd")+'" target="_blank"><img src="'+U(qn("https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_68x28dp.png"))+'" alt="Google '+U(Id)+'"></a></td>'+(oa?'<td width=1><img src="'+U(qn("https://www.google.com/images/cleardot.gif"))+'" width="9" height="15" title="'+U(oa)+'" alt="'+U(oa)+
 '" style="background-image:url('+U(qn(Ln))+');background-position:-56px 0px;margin:0 4px"></td>':"")+'<td class="'+U("VIpgJd-ZVi9od-ORHb-KE6vqe")+'"></td><td><table border=0 cellspacing=0 cellpadding=0 height=100%><tr id="'+U(c)+'" style="display:none" valign=middle><td nowrap><span class="'+U("VIpgJd-ZVi9od-ORHb-bN97Pc")+'">'+cn(G)+'</span></td><td class="'+U("VIpgJd-ZVi9od-ORHb-KE6vqe")+'"></td><td nowrap><div class="'+U("VIpgJd-ZVi9od-LgbsSe")+'"><div><button id="'+U(d)+'"><b>'+cn(Iw)+'</b></button></div></div></td><td class="'+

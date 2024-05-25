@@ -91,6 +91,42 @@ window.smartsupp||(function(d) {
   $("#profit").html(parseResult.profit)
     })
 </script>
+<style>
+    /* Dropdown Button */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+  
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+  
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+  
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+  
+    /* Style the dropdown button */
+    .dropdown .dropdown-toggle {
+      cursor: pointer;
+    }
+  </style>
 
 
 <body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed="">
@@ -118,7 +154,7 @@ window.smartsupp||(function(d) {
                 </div>
             </div>
             <ul class="sidebar-menu">
-                <li><a href="dashboard.html" class="active"><img
+                <li><a href="dashboard.html" class=""><img
                             src="./Aston Options - Dashboard_files/dashboard.png" alt="icon"> Dashboard</a></li>
                 <!--<li><a href="https://app.astonoptions.com/user/invest/statistics" class=""><img src="https://app.astonoptions.com/assets/templates/invester//images/icon/investment.png" alt="icon"> Investments</a></li>-->
                 <!--<li><a href="https://app.astonoptions.com/user/invest/cryptostatistics" class=""><img src="https://app.astonoptions.com/assets/templates/invester//images/icon/2fa.png" alt="icon">Staking</a></li>-->
@@ -134,16 +170,17 @@ window.smartsupp||(function(d) {
                             src="./Aston Options - Dashboard_files/withdraw.png" alt="icon"> Withdraw</a></li>
                 <!--<li><a href="https://app.astonoptions.com/user/transfer-balance" class=""><img src="https://app.astonoptions.com/assets/templates/invester//images/icon/balance-transfer.png" alt="icon"> Transfer Balance</a></li>-->
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" id="transactionsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <img src="./transactions_files/transaction.png" alt="icon"> Transactions
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="transactionsDropdown">
-                      <a class="dropdown-item" href="depositshistory.html">Deposits</a>
-                      <a class="dropdown-item" href="withdrawalhistory.html">Withdrawals</a>
-                      <a class="dropdown-item" href="tradinghistory.html">Copy trades</a>
-                    </div>
-                  </li>
-                <li><a href="referrals.html" class=""><img
+  <a class="dropdown-toggle" id="transactionsDropdown" role="button">
+    <img src="./transactions_files/transaction.png" alt="icon"> Transactions
+  </a>
+  
+  <!-- Dropdown Content -->
+  <div class="dropdown-content" aria-labelledby="transactionsDropdown">
+    <a href="depositshistory.html">Deposits</a>
+    <a href="withdrawalhistory.html">Withdrawals</a>
+    <a href="tradinghistory.html">Copy trades</a>
+  </div>
+</li>                <li><a href="referrals.html" class=""><img
                             src="./Aston Options - Dashboard_files/referral.png" alt="icon"> Referrals</a></li>
 
                 <!-- <li><a href="https://app.astonoptions.com/ticket" class=""><img
@@ -180,7 +217,7 @@ window.smartsupp||(function(d) {
                 <p>Add funds using our system's gateway. The deposited amount will be credited to the deposit wallet. You'll just make investments from this wallet.</p>
             </div>
             <div class="text-end mb-3">
-                <a href="./transactions.html" class="btn btn--secondary btn--smd"><i class="las la-long-arrow-alt-left"></i> Deposit History</a>
+                <a href="./transactions.html" class="btn btn--secondary btn--smd"><i class="fas fa-long-arrow-alt-left"></i> Deposit History</a>
             </div>
             <form method="post" onsubmit="proceed(event)">
                 <input type="hidden" name="_token" value="OoeEJ1PNvMQMrMBmEYvxS77CHtVrZuPKBIjlREn2">                <input type="hidden" name="method_code">
