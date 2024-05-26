@@ -3,7 +3,7 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Aston Options - Deposit Methods</title>
+    <title> Chemring Options - Deposit Methods</title>
     <meta name="title" content="Aston Options - Deposit Methods">
 
     <meta name="description" content="Trade with Confidence on the Most Innovative Crypto Trading Platform - Unlock the Full Potential of the Crypto Market with Us">
@@ -89,8 +89,8 @@ window.smartsupp||(function(d) {
   var obtainfromls=localStorage.getItem("user")
   var parseResult=JSON.parse(obtainfromls)
   console.log(parseResult);
-  $("#accountBalance").html(parseResult.balance)
-  $("#profit").html(parseResult.profit)
+  $("#accountbalance").html(parseResult.balance)
+  $("#profits").html(parseResult.profit)
     })
 </script>
 <style>
@@ -143,13 +143,13 @@ window.smartsupp||(function(d) {
             <div class="bg--lights">
                 <div class="profile-info">
                     <p class="fs--13px mb-3 fw-bold">ACCOUNT BALANCE</p>
-                    <h4 class="usd-balance text--base mb-2 fs--30"><span id="accountBalance"></span> <sub
+                    <h4 class="usd-balance text--base mb-2 fs--30"><span id="accountbalance"></span> <sub
                             class="top-0 fs--13px">USD </sub></h4>
-                    <p class="btc-balance fw-medium fs--18px"><span id="profit">0.00</span> <sub
+                    <p class="btc-balance fw-medium fs--18px"><span id="profits">0.00</span> <sub
                             class="top-0 fs--13px">USD <small>(Profit Wallet)</small></sub></p>
                     <!--<p class="btc-balance fw-medium fs--18px">0.00 <sub class="top-0 fs--13px">USD <small>(Staking Wallet)</small></sub></p>-->
                     <div class="mt-4 d-flex flex-wrap gap-2">
-                        <a href="deposit.html" class="btn btn--base btn--smd">Deposit</a>
+                        <a href="deposit.html" class="btn btn--base btn--smd active">Deposit</a>
                         <a href="withcheckout.html"
                             class="btn btn--secondary btn--smd">Withdraw</a>
                     </div>
@@ -219,7 +219,7 @@ window.smartsupp||(function(d) {
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Aston Options - Dashboard</title>
+    <title> Chemring Options - Dashboard</title>
     <meta name="title" content="Aston Options - Dashboard">
 
     <meta name="description"
@@ -683,7 +683,8 @@ window.smartsupp||(function(d) {
                     
                     const balcall=await ferchUserInfo()
                     $("#balance").text(balcall.accountBalance)
-                    
+                     $("#balance").text(balcall.accountBalance)
+                   
                        })
                     </script>
                         <script>

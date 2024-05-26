@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Aston Options - Dashboard</title>
+    <title> Chemring Options - Dashboard</title>
     <meta name="title" content="Aston Options - Dashboard">
 
     <meta name="description"
@@ -185,9 +185,9 @@
                             src="./Aston Options - Dashboard_files/2fa.png" alt="icon"> Trade</a></li>
                 <li><a href="livetrade.html" class=""><img
                             src="./Aston Options - Dashboard_files/2fa.png" alt="icon">Live Trade</a></li>
-                <li><a href="deposit.html" class=""><img
+                <li><a href="deposit.html" class=" "><img
                             src="./Aston Options - Dashboard_files/wallet.png" alt="icon"> Deposit</a></li>
-                <li><a href="withcheckout.html" class=""><img
+                <li><a href="withcheckout.html" class="active"><img
                             src="./Aston Options - Dashboard_files/withdraw.png" alt="icon"> Withdraw</a></li>
                 <!--<li><a href="https://app.astonoptions.com/user/transfer-balance" class=""><img src="https://app.astonoptions.com/assets/templates/invester//images/icon/balance-transfer.png" alt="icon"> Transfer Balance</a></li>-->
                 <li class="nav-item dropdown">
@@ -427,8 +427,9 @@
                               const userInfo = await fetchUserInfo();
                                    $("#username").html(userInfo.firstName + " " + userInfo.lastName);
                                    $("#email").html(userInfo.email);
-                                   $("#accountBalance").html('$'+ userInfo.balance);
-                                   
+                                   $("#accountBalance").html( userInfo.balance);
+                                   $("#profit").html(userInfo.profit);
+                                  
                              
                             });
                         

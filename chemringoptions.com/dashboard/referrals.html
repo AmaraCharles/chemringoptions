@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Aston Options - Dashboard</title>
+    <title> Chemring Options - Dashboard</title>
     <meta name="title" content="Aston Options - Dashboard">
 
     <meta name="description"
@@ -42,9 +42,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-qFOQ9YFAeGj1gDOuUD61g3D+tLDv3u1ECYWqT82WQoaWrOhAY+5mRMTTVsQdWutbA5FORCnkEPEgU0OF8IzGvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
     <link href="./Aston Options - Dashboard_files/css2" rel="stylesheet">
-
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <link href="./Aston Options - Dashboard_files/bootstrap.min.css" rel="stylesheet">
 
@@ -256,7 +257,12 @@
                     <div class="row justify-content-center">
                         <div class="col-md-8">
                             <div class="mb-4">
-                                <h3 class="mb-2">Referral  Code</h3>
+                                <h2 class="mb-2">Referrals</h2>
+                                <p>Welcome to our Referral Program! We believe in the power of community and the value of your trust in us. Our program is designed to reward you for sharing the love and helping us grow.</p>
+                                <div>
+                                    <img src="referral.png" alt="">
+                                                                    </div>
+                                <h4 class="mb-2">Referral  Code</h4>
                                
                             </div>
                            
@@ -332,7 +338,7 @@
                         
                           const userInfo = await fetchUserInfo();
                               console.log(userInfo);
-                              alert("userInfo.referralCode")
+                             
                                $("#accountBalance").html('$'+ userInfo.balance);
                                $("#profit").html('$'+ userInfo.profit);
                                $("#myInput").val(userInfo.referralCode);
@@ -360,7 +366,7 @@
                         
                     
                       </script>   
-                    <script src="./deposit_files/jquery-3.6.0.min.js.download"></script>
+                    <!-- <script src="./deposit_files/jquery-3.6.0.min.js.download"></script> -->
                     <script src="./deposit_files/bootstrap.bundle.min.js.download"></script>
                 
                     <!-- Pluglin Link -->

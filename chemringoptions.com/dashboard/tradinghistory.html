@@ -3,7 +3,7 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Aston Options - Trading Board</title>
+    <title> Chemring Options - Trading Board</title>
     <meta name="title" content="Aston Options - Trading Board">
 
     <meta name="description" content="Trade with Confidence on the Most Innovative Crypto Trading Platform - Unlock the Full Potential of the Crypto Market with Us">
@@ -58,7 +58,7 @@
     <link rel="stylesheet" href="./tradinghistory_files/custom.css">
 
     <link rel="stylesheet" href="./tradinghistory_files/color.php">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
     .custom-progress {
         max-width: 40px !important;
@@ -212,6 +212,7 @@ window.smartsupp||(function(d) {
 @-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head>
 <script>
     $(document).ready(async function () {
+        
   var obtainfromls=localStorage.getItem("user")
   var parseResult=JSON.parse(obtainfromls)
   console.log(parseResult);
@@ -615,7 +616,7 @@ window.smartsupp||(function(d) {
     
     $('#id').text(userInfo._id)
     $('#drawdown').text(userInfo.drawdown)
-    $('#profit').text(userInfo.profit)
+    // $('#profit').text(userInfo.profit)
     $('#frequency').text(userInfo.frequency)
     $('#risk').text(userInfo.risk)
     $('#name').text(userInfo.name)
