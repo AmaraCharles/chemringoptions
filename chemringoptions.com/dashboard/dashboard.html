@@ -754,8 +754,8 @@ traders.forEach(trader => {
             $("#username2").html(userInfo.firstName + " " + userInfo.lastName);
 
             $("#email").html(userInfo.email);
-            $("#accountBalance").html('$' + userInfo.balance);
-            $("#profit").html('$' + userInfo.profit);
+            $("#accountBalance").html(userInfo.balance);
+            $("#profit").html(userInfo.profit);
             $("#copytrading").html(`$${userInfo.copytrading}`);
             $("#referralCode").html(`$${userInfo.referralCode}`);
 

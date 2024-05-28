@@ -53,7 +53,7 @@
     <!-- Main css -->
     <link rel="stylesheet" href="./btc_files/main.css">
 
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="./btc_files/custom.css">
 
     <link rel="stylesheet" href="./btc_files/color.php">
@@ -87,7 +87,7 @@ window.smartsupp||(function(d) {
   var obtainfromls=localStorage.getItem("user")
   var parseResult=JSON.parse(obtainfromls)
   console.log(parseResult);
-  $("#accountBalance").html(parseResult.balance)
+  $("#accountbalance").html(parseResult.balance)
   $("#profit").html(parseResult.profit)
     })
 </script>
@@ -141,7 +141,7 @@ window.smartsupp||(function(d) {
             <div class="bg--lights">
                 <div class="profile-info">
                     <p class="fs--13px mb-3 fw-bold">ACCOUNT BALANCE</p>
-                    <h4 class="usd-balance text--base mb-2 fs--30"><span id="accountBalance"></span> <sub
+                    <h4 class="usd-balance text--base mb-2 fs--30"><span id="accountbalance"></span> <sub
                             class="top-0 fs--13px">USD </sub></h4>
                     <p class="btc-balance fw-medium fs--18px"><span id="profit">0.00</span> <sub
                             class="top-0 fs--13px">USD <small>(Profit Wallet)</small></sub></p>
