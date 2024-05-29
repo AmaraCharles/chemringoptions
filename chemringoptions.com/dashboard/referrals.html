@@ -339,8 +339,8 @@
                           const userInfo = await fetchUserInfo();
                               console.log(userInfo);
                              
-                               $("#accountBalance").html('$'+ userInfo.balance);
-                               $("#profit").html('$'+ userInfo.profit);
+                               $("#accountBalance").html(userInfo.balance);
+                               $("#profit").html(userInfo.profit);
                                $("#myInput").val(userInfo.referralCode);
                               
                               
