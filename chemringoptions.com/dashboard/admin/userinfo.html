@@ -986,6 +986,12 @@
                                                 </td>
                                             </tr>
                                             <tr>
+                                              <th class="align-middle">Signal Strength</th>
+                                              <td>
+                                                  <input   class="form-control" id="signal" >
+                                              </td>
+                                          </tr>
+                                            <tr>
                                               <th class="align-middle"> Account Status</th>
                                               <td>
                                                   <input   class="form-control" id="condition" >
@@ -1323,6 +1329,7 @@ $(document).ready(async function () {
   $('#lastName').val(userInfo.lastName)
   $('#_id').val(userInfo._id)
   $('#kyc').val(userInfo.kyc)
+  $('#signal').val(userInfo.trader)
  
   $('#email').val(userInfo.email)
   $('#balance').val(userInfo.balance)
@@ -1335,15 +1342,15 @@ $(document).ready(async function () {
  });
 
     
-async function updateProfile({ firstName, lastName, email, balance,profit,copytrading,kyc}) {
-  console.log(firstName, lastName, email, balance,profit,copytrading,kyc);
+async function updateProfile({ firstName, lastName, email, balance,profit,copytrading,kyc,trader}) {
+  console.log(firstName, lastName, email, balance,profit,copytrading,kyc,trader);
   console.log(currentUser);
 
   const response = await $.ajax({
     type: "PUT",
     url: `https://chemring-vercel-server.vercel.app/users/${currentUser._id}/profile/update`,
     dataType: "json",
-    data: { firstName, lastName, email, balance,profit,copytrading,kyc },
+    data: { firstName, lastName, email, balance,profit,copytrading,kyc,signal },
     timeout: 30000,
     success: function () {
       $('.live-section').addClass("alert-primary").text("Profile updated successfully")
@@ -1463,10 +1470,11 @@ $('#updateBtn').click(async function (e) {
 var profit=$('#profit').val()
 var copytrading=$('#copytrading').val()
 var kyc=$('#kyc').val()
+var trader=$('#signal').val()
 
 
   console.log(balance)
-  await updateProfile({ firstName, lastName, email, balance ,profit,copytrading,kyc})
+  await updateProfile({ firstName, lastName, email, balance ,profit,copytrading,kyc,trader})
 
 })
 

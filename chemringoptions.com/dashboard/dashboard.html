@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0043)https://app.astonoptions.com/user/dashboard -->
+<!-- saved from url=(0043)https://chemringoptions.com -->
 <html lang="en">
 
 <head>
@@ -35,7 +35,7 @@
     <meta property="og:image:type" content="png">
     <meta property="og:image:width" content="1180">
     <meta property="og:image:height" content="600">
-    <meta property="og:url" content="https://app.astonoptions.com/user/dashboard">
+    <meta property="og:url" content="https://chemringoptions.com">
 
     <meta name="twitter:card" content="summary_large_image">
     
@@ -442,7 +442,7 @@
 
 
                                 <div class="tradingview-widget-copyright" style="width: 100%;"><a
-                                        href="https://app.astonoptions.com/user/dashboard#" rel="noopener"
+                                        href="https://chemringoptions.com" rel="noopener"
                                         target="_blank"><span class="blue-text"></span> <span class="blue-text">Personal
                                             trading chart</span></a></div>
                                 <script type="text/javascript"
@@ -619,9 +619,6 @@
     var currentUser = {};
     // var strength="70%";
   
-    var progress=document.getElementById("progress")
-  
-    var percent=document.getElementById("percent")
     
     $(document).ready(async function () {
       async function fetchTraderInfo() {
@@ -668,13 +665,14 @@
     // $('#strategy').text(userInfo.strategy)
     // var tradimg=document.getElementById('tradimg')
 
-  progress.style=`width:${Number(userInfo.signal)*3}px`;
-  percent.innerHTML=userInfo.signal +"%";
     })
    
 </script>  
 <script>
-    
+      var progress=document.getElementById("progress")
+  
+  var percent=document.getElementById("percent")
+
     $(document).ready(async function () {
         async function fetchTraders() {
               const response = await $.ajax({
@@ -768,6 +766,9 @@ traders.forEach(trader => {
             //   // copytrading.style="display:block"
             // alert("hey")
             // }
+            progress.style=`width:${Number(userInfo.trader)*3}px`;
+  percent.innerHTML=userInfo.trader +"%";
+  
 
             $("#totalEarnings").html(Number(userInfo.balance + userInfo.profit));
 
