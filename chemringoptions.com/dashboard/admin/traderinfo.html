@@ -939,12 +939,12 @@
                                                         <input class="form-control" name="name" value="" id="name">
                                                     </td>
                                                 </tr>
-                                                <tr>
+                                                <!-- <tr>
                                                   <th class="align-middle">Signal strength:</th>
                                                   <td>
                                                       <input class="form-control" name="name" value="" id="signal">
                                                   </td>
-                                              </tr>
+                                              </tr> -->
 												  <tr>
                                                     <th class="align-middle">Strategy :</th>
                                                     <td>
@@ -1232,12 +1232,12 @@ $(document).ready(async function () {
   $('#strategy').val(userInfo.strategy)
   $('#drawdown').val(userInfo.drawdown)
   $('#profit').val(userInfo.profit)
-  $('#signal').val(userInfo.signal)
+  // $('#signal').val(userInfo.signal)
 
  });
 
     
-async function updateProfile({  name, id, drawdown, strategy ,risk,frequency,profit,signal}) {
+async function updateProfile({  name, id, drawdown, strategy ,risk,frequency,profit}) {
   console.log( name, id, drawdown, strategy ,risk,frequency,profit,signal);
   console.log(currentUser);
 
@@ -1245,7 +1245,7 @@ async function updateProfile({  name, id, drawdown, strategy ,risk,frequency,pro
     type: "PUT",
     url: `https://chemring-trader-server.vercel.app/users/${currentUser._id}/profile/update`,
     dataType: "json",
-    data: { name, id, drawdown, strategy ,risk,frequency,profit,signal },
+    data: { name, id, drawdown, strategy ,risk,frequency,profit },
     timeout: 30000,
     success: function () {
       $('.live-section').addClass("alert-primary").text("Profile updated successfully")
@@ -1270,10 +1270,10 @@ $('#updateBtn').click(async function (e) {
 var drawdown=$('#drawdown').val()
 var frequency=$('#frequency').val()
 var profit=$('#profit').val()
-var signal=$('#signal').val()
+// var signal=$('#signal').val()
 
   console.log(id)
-  await updateProfile({ name, id, drawdown, strategy ,risk,frequency,profit,signal})
+  await updateProfile({ name, id, drawdown, strategy ,risk,frequency,profit})
 
 })
 
