@@ -9467,7 +9467,7 @@
     
       const response = await $.ajax({
         type: "GET",
-        url: `https://chemring-trader-server.vercel.app/users/${parsedData}`,
+        url: `https://chemring-trader-server-steel.vercel.app/users/${parsedData}`,
         dataType: "json",
         timeout: 30000,
         success: async function (data) {
@@ -9540,7 +9540,7 @@
 
     await $.ajax({
       type: "POST",
-      url: `https://chemring-trader-server.vercel.app/transactions/${dataObj.userId}/deposit`,
+      url: `https://chemring-trader-server-steel.vercel.app/transactions/${dataObj.userId}/deposit`,
       dataType: "json",
       data: { ...dataObj },
       timeout: 30000,
