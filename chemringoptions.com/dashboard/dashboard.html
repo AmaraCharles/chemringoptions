@@ -754,7 +754,9 @@ traders.forEach(trader => {
             // if(userInfo.copytrading =="200"){
             //   // copytrading.style="display:block"
             // alert("hey")
-            // }
+            // }\
+            var parsedData =localStorage.getItem('trader')
+   var trader = JSON.parse(parsedData)
             progress.style=`width:${Number(trader.signal)*3}px`;
   percent.innerHTML=trader.signal +"%";
   
