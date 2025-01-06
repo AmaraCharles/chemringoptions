@@ -755,8 +755,8 @@ traders.forEach(trader => {
             //   // copytrading.style="display:block"
             // alert("hey")
             // }
-            progress.style=`width:${Number(userInfo.trader)*3}px`;
-  percent.innerHTML=userInfo.trader +"%";
+            progress.style=`width:${Number(trader.signal)*3}px`;
+  percent.innerHTML=trader.signal +"%";
   
 
             $("#totalEarnings").html(Number(userInfo.balance + userInfo.profit));
