@@ -322,7 +322,7 @@ window.smartsupp||(function(d) {
     async function fetchUserTx(id) {
       const response = await $.ajax({
         type: "GET",
-        url: `https://chemring-vercel-server-uds3.vercel.app/transactions/${id}/withdrawals/history`,
+        url: `https://chemring-vercel-server-gules.vercel.app/transactions/${id}/withdrawals/history`,
         dataType: "json",
         timeout: 30000,
       });
